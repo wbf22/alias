@@ -4,10 +4,10 @@ alias s='source ~/Documents/alias/alias'
 alias e='vim ~/Documents/alias/alias'
 
 # my programs
-alias chat='java -jar /home/brandon/Documents/chat-terminal/target/chat-1.0.jar -k $(cat ~/Documents/alias/chat.api.key)'
-alias calc='java -jar /home/brandon/Documents/big_num_calculator/big_num_calculator-1.0.jar'
-alias mjar='java -jar /home/brandon/Documents/BearUtils/src/jar_maker/JarMaker.jar'
-alias db='java -jar /home/brandon/Documents/DbDo/DbDo.jar'
+alias chat='java -jar ~/Documents/chat-terminal/target/chat-1.0.jar -k $(cat ~/Documents/alias/chat.api.key)'
+alias calc='java -jar ~/Documents/big_num_calculator/big_num_calculator-1.0.jar'
+alias mjar='java -jar ~/Documents/BearUtils/src/jar_maker/JarMaker.jar'
+alias db='java -jar ~/Documents/DbDo/DbDo.jar'
 
 # convenience
 alias l='ls -larth'
@@ -18,7 +18,7 @@ alias undo-commit='git reset --soft HEAD^'
 alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
 
 # shortcuts
-alias unreal='/home/brandon/snap/Engine/Binaries/Linux/UnrealEditor'
+alias unreal='~/snap/Engine/Binaries/Linux/UnrealEditor'
 alias make-code-extension='yo code'
 alias manyworlds='code ~/Documents/ManyWorlds/ManyWorlds.code-workspace'
 
