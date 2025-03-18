@@ -1,6 +1,6 @@
 # for alias making
-alias palias='cat ~/Documents/alias/alias'
-alias s='source ~/Documents/alias/alias'
+alias palias='cat ~/Documents/alias/alias && cat ~/Documents/alias/work'
+alias s='source ~/Documents/alias/alias && source ~/Documents/alias/work'
 alias e='vim ~/Documents/alias/alias'
 
 # my programs
