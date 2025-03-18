@@ -33,4 +33,5 @@ alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#
 alias unreal='~/snap/Engine/Binaries/Linux/UnrealEditor'
 alias make-code-extension='yo code'
 alias manyworlds='code ~/Documents/ManyWorlds/ManyWorlds.code-workspace'
+alias bmo='sh /home/brandon/Documents/BMO/rerun.sh'
 
