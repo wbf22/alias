@@ -10,12 +10,24 @@ alias mjar='java -jar ~/Documents/BearUtils/src/jar_maker/JarMaker.jar'
 alias db='java -jar ~/Documents/DbDo/DbDo.jar'
 
 # convenience
-alias l='ls -larth'
+alias ld='ls -larth'
+la() {
+    ls -lath | awk '{
+        size = $5;
+        date = $6" "$7" "$8;
+        name = "";
+        for (i=9; i<=NF; i++) name = name $i " ";
+        printf "%-16s %-10s %s\n", date, size, name;
+    }'
+}
+# ls -lath | awk '{size=$5; date=$6" "$7" "$8; name=""; for(i=9; i<=NF; i++) name=name $i " "; printf "%-10s %-12s %s\n", size, date, name}'
 alias count='ls -l | wc -l' # counts files in a directory
+alias l='clear'
 
 # git
-alias undo-commit='git reset --soft HEAD^'
+alias undo-commit='git reset --soft HEAD^' # origin/main or something
 alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
+
 
 # shortcuts
 alias unreal='~/snap/Engine/Binaries/Linux/UnrealEditor'
