@@ -11,6 +11,7 @@ alias db='java -jar ~/Documents/Db-Do/DbDo.jar'
 
 # convenience
 alias ld='ls -larth'
+unalias la
 la() {
     ls -lah | awk '{
         size = $5;
