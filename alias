@@ -12,7 +12,7 @@ alias db='java -jar ~/Documents/Db-Do/DbDo.jar'
 # convenience
 alias ld='ls -larth'
 la() {
-    ls -lath | awk '{
+    ls -lah | awk '{
         size = $5;
         date = $6" "$7" "$8;
         name = "";
