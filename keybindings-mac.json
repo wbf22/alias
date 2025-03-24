@@ -1040,4 +1040,14 @@
         "key": "ctrl+g",
         "command": "-workbench.action.gotoLine"
     },
+    {
+        "key": "shift+cmd+-",
+        "command": "editor.foldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+[",
+        "command": "-editor.foldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
+    },
 ]
