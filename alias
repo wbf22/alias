@@ -27,6 +27,37 @@ alias ports='netstat -tuln'
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
 
+# making systemctl scripts
+create_systemd() {
+    if [ -z "$1" ]; then
+        echo "Please provide a service name. (my_service.service)"
+        return 1
+    fi
+    
+    FILE_PATH="/etc/systemd/system/$1.service"
+    TEMPLATE="$HOME/Documents/alias/basic_systemctl_script.md"
+    
+    sudo cp "$TEMPLATE" "$FILE_PATH"
+}
+
+alias create_service='create_systemd'
+alias service_files='cd /etc/systemd/system'
+start_systemd() {
+    if [ -z "$1" ]; then
+        echo "Please provide a service name. (my_service.service)"
+        return 1
+    fi
+
+    sudo systemctl daemon-reload
+
+    sudo systemctl enable "$1"
+}
+alias start_service='start_systemd' # followed by your service name
+alias status='sudo systemctl status' # followed by your service name
+alias logs='sudo journalctl -u "$1" -f' # followed by your service name
+alias stop_service='sudo systemctl stop' # followed by your service name
+
+
 # git
 alias undo-commit='git reset --soft HEAD^' # origin/main or something
 alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
