@@ -4,7 +4,8 @@ alias s='source ~/Documents/alias/alias && source ~/Documents/alias/work'
 alias e='vim ~/Documents/alias/alias'
 
 # my programs
-alias chat='java -jar ~/Documents/chat-terminal/chat-1.0.jar -k $(cat ~/Documents/alias/chat.api.key)'
+alias chat='python3 ~/Documents/chat_terminal/chat.py -k $(cat ~/Documents/alias/chat.api.key)'
+alias chat-old='java -jar ~/Documents/chat-terminal/chat-1.0.jar -k $(cat ~/Documents/alias/chat.api.key)'
 alias calc='java -jar ~/Documents/big_num_calculator/big_num_calculator-1.0.jar'
 alias mjar='java -jar ~/Documents/BearUtils/src/jar_maker/JarMaker.jar'
 alias db='java -jar ~/Documents/Db-Do/DbDo.jar'
