@@ -9,6 +9,7 @@ alias chat-old='java -jar ~/Documents/chat-terminal/chat-1.0.jar -k $(cat ~/Docu
 alias calc='java -jar ~/Documents/big_num_calculator/big_num_calculator-1.0.jar'
 alias mjar='java -jar ~/Documents/BearUtils/src/jar_maker/JarMaker.jar'
 alias db='java -jar ~/Documents/Db-Do/DbDo.jar'
+alias csv='python3 ~/Documents/micro_spreadsheet/micro_spreadsheet.py'
 
 # convenience
 alias ld='ls -larth'
