@@ -3,6 +3,8 @@
 alias new-bear-key='ssh-keygen -t rsa -b 4096 -C "thebear34135@gmail.com" -f ~/bear-key'
 alias new-wfowler-key='ssh-keygen -t rsa -b 4096 -C "wfowler@utah.gov" -f ~/wfowler-key'
 alias refresh-keys='eval "$(ssh-agent -s)" && ssh-add ~/bear-key &&  ssh-add ~/wfowler-key'
+
+# use like 'personal-remote wbf22/project.git'
 personal-remote() {
     git remote set-url origin "personal:$1"
 }
