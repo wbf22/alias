@@ -5,6 +5,7 @@ alias new-wfowler-key='ssh-keygen -t rsa -b 4096 -C "wfowler@utah.gov" -f ~/wfow
 alias refresh-keys='eval "$(ssh-agent -s)" && ssh-add ~/bear-key &&  ssh-add ~/wfowler-key'
 
 # use like 'personal-remote wbf22/project.git'
+# or 'git clone git@work:wbf22/project.git' for cloning
 personal-remote() {
     git remote set-url origin "personal:$1"
 }
