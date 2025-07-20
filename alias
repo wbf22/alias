@@ -22,18 +22,12 @@ alias draw='python3 ~/Documents/alias/whitespace_file.py'
 # convenience
 alias ld='ls -larth'
 unalias la
-la() {
-    ls -lah | awk '{
-        size = $5;
-        date = $6" "$7" "$8;
-        name = "";
-        for (i=9; i<=NF; i++) name = name $i " ";
-        printf "%-16s %-10s %s\n", date, size, name;
-    }'
-}
+alias la='~/Documents/la/la'
 alias count='ls -l | wc -l' # counts files in a directory
 alias l='clear'
 alias ports='netstat -tuln'
+alias nowrap='tput rmam'
+alias wrap='tput smam'
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
 
