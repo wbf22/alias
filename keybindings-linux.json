@@ -761,7 +761,22 @@
         "when": "editorTextFocus && foldingEnabled"
     },
     {
-        "key": "alt+c",
+        "key": "ctrl+alt+c",
         "command": "editor.action.toggleColumnSelection"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "-copyFilePath",
+        "when": "!editorFocus"
     }
 ]
