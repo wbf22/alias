@@ -1,3 +1,10 @@
+# java versions
+alias java8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) && echo "Switched to Java 8: $JAVA_HOME"'
+alias java21='export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home && echo "Switched to Java 21: $JAVA_HOME"'
+
+# other
+alias vpn_check='traceroute test-dld.cxqikvenatzt.us-gov-west-1.rds.amazonaws.com'
+
 
 # switching git
 alias new-bear-key='ssh-keygen -t rsa -b 4096 -C "thebear34135@gmail.com" -f ~/bear-key'

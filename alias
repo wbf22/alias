@@ -85,6 +85,7 @@ delete_branch() {
     git push origin --delete "$1"
 
 }
+# curl -u "wbf22" https://api.github.com/user/repos -d '{"name":"terminal_images"}'
 
 
 # shortcuts
