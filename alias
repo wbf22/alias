@@ -34,6 +34,7 @@ alias wrap='tput smam'
 alias public_ip='curl ifconfig.me'
 alias ip='ifconfig'
 alias size='du -sh'
+alias size_down='du -h --max-depth=1'
 # 'sensors' is for checking temperatures on my linux pc
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
