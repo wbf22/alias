@@ -17,6 +17,7 @@ alias csv='python3 ~/Documents/micro_spreadsheet/micro_spreadsheet.py'
 alias draw='python3 ~/Documents/alias/whitespace_file.py'
 alias sync_server='python3 ~/Documents/file_server/file_server.py --server --dir ~/Documents/SYNC --password the_bear_is_bash_fb2754a0_73b4_44eb_9a99_df36e4aeb95b'
 alias bsync='python3 ~/Documents/file_server/file_server.py --dir ~/Documents/SYNC --password the_bear_is_bash_fb2754a0_73b4_44eb_9a99_df36e4aeb95b'
+alias ti='~/Documents/terminal_images/ti -i'
 
 
 
@@ -29,6 +30,8 @@ alias l='clear'
 alias ports='netstat -tuln'
 alias nowrap='tput rmam'
 alias wrap='tput smam'
+alias public_ip='curl ifconfig.me'
+alias ip='ifconfig'
 # 'sensors' is for checking temperatures on my linux pc
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
@@ -93,4 +96,4 @@ alias unreal='~/snap/Engine/Binaries/Linux/UnrealEditor'
 alias make-code-extension='yo code'
 alias manyworlds='code ~/Documents/ManyWorlds/ManyWorlds.code-workspace'
 alias bmo='sh /home/brandon/Documents/BMO/rerun.sh'
-
+alias todo='csv ~/Documents/SYNC/todo.csv'
