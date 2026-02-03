@@ -91,6 +91,11 @@ delete_branch() {
     git push origin --delete "$1"
 
 }
+save-git() {
+    git add .
+    git commit
+    git push
+}
 # curl -u "wbf22" https://api.github.com/user/repos -d '{"name":"terminal_images"}'
 
 
