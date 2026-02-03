@@ -91,7 +91,7 @@ delete_branch() {
     git push origin --delete "$1"
 
 }
-save-git() {
+save() {
     git add .
     git commit
     git push
