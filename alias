@@ -96,6 +96,47 @@ save() {
     git commit
     git push
 }
+repo() {
+    # Get the remote URL
+    remote_url=$(git remote get-url origin)
+
+
+    # Check if it's one of your SSH aliases
+    if [[ "$remote_url" == personal:* ]]; then
+        host="github.com"
+        repo_path=$(echo "$remote_url" | sed 's/.*:\(.*\)\.git/\1/')
+    elif [[ "$remote_url" == work:* ]]; then
+        host="github.com"
+        repo_path=$(echo "$remote_url" | sed 's/.*:\(.*\)\.git/\1/')
+    elif [[ "$remote_url" == git@* ]]; then
+        # Standard SSH format: git@github.com:user/repo.git
+        host=$(echo "$remote_url" | sed 's/git@\(.*\):.*/\1/')
+        repo_path=$(echo "$remote_url" | sed 's/.*:\(.*\)\.git/\1/')
+    elif [[ "$remote_url" == https://* ]]; then
+        # Already an HTTPS URL: https://github.com/user/repo.git
+        url=$(echo "$remote_url" | sed 's/\.git$//')
+        echo "Opening: $url"
+        open "$url"
+        return
+    else
+        echo "Unknown remote URL format: $remote_url"
+        return 1
+    fi
+
+    # Build and open the URL
+    url="https://$host/$repo_path"
+    echo "Opening: $url"
+
+     
+    # Detect OS and use appropriate open command
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        open "$url"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        xdg-open "$url"
+    else
+        echo "Unsupported OS: $OSTYPE"
+    fi
+}
 # curl -u "wbf22" https://api.github.com/user/repos -d '{"name":"terminal_images"}'
 
 
