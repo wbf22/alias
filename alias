@@ -92,8 +92,8 @@ delete_branch() {
 
 }
 save() {
-    git add .
-    git commit
+    git add . && \
+    git commit && \
     git push
 }
 repo() {
