@@ -133,7 +133,7 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
 
     # Checkout branch
     git reset --hard "origin/$BRANCH"
-    git branch "--set-upstream-to=origin/$BRANCH $BRANCH"
+    git branch "--set-upstream-to=origin/$BRANCH" "$BRANCH"
 
 
     echo "Repository reset complete. Checked out branch '$BRANCH'."
