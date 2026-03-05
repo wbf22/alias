@@ -118,36 +118,33 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
     fi
 
     echo ""
-    echo "Remote URL: $REMOTE_URL"
-    echo ""
+    echo "** Remote URL: $REMOTE_URL **"
     echo ""
 
-    echo ""
-    echo "Remove existing git repo"
+    echo "** Remove existing git repo **"
     echo ""
     rm -rf .git
-    echo ""
 
     echo ""
-    echo "Reinitialize repo"
+    echo "** Reinitialize repo **"
     echo ""
     git init -b "$BRANCH"
     echo ""
 
     echo ""
-    echo "Add original remote"
+    echo "** Add original remote **"
     echo ""
     git remote add origin "$REMOTE_URL"
     echo ""
 
     echo ""
-    echo "Fetch branch"
+    echo "** Fetch branch **"
     echo ""
     git fetch origin "$BRANCH"
     echo ""
 
     echo ""
-    echo "Reset to remote branch and set upstream"
+    echo "** Reset to remote branch and set upstream **"
     echo ""
     git reset --hard "origin/$BRANCH"
     git branch "--set-upstream-to=origin/$BRANCH" "$BRANCH"
