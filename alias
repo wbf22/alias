@@ -124,7 +124,7 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
     rm -rf .git
 
     # Reinitialize repo
-    git init
+    git init -b "$BRANCH"
 
     # Add original remote
     git remote add origin "$REMOTE_URL"
@@ -133,10 +133,9 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
     git fetch origin "$BRANCH"
 
     # Checkout branch
-    git checkout -b "$BRANCH" "origin/$BRANCH"
+    git reset --hard "origin/$BRANCH"
+    git branch "--set-upstream-to=origin/$BRANCH $BRANCH"
 
-    # Pull latest changes
-    git pull origin "$BRANCH"
 
     echo "Repository reset complete. Checked out branch '$BRANCH'."
 }
