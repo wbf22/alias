@@ -152,7 +152,7 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
 
 
     echo ""
-    echo "Repository reset complete. Checked out branch '$BRANCH'."
+    echo "** Repository reset complete. Checked out branch '$BRANCH'. **"
 }
 delete_branch() {
     if [ -z "$1" ]; then
