@@ -125,7 +125,6 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
     echo ""
     rm -rf .git
 
-    echo ""
     echo "** Reinitialize repo **"
     echo ""
     git init -b "$BRANCH"
@@ -135,7 +134,6 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
     echo "** Add original remote **"
     echo ""
     git remote add origin "$REMOTE_URL"
-    echo ""
 
     echo ""
     echo "** Fetch branch **"
