@@ -38,7 +38,26 @@ alias size_down='du -h --max-depth=1'
 # 'sensors' is for checking temperatures on my linux pc
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
+about() {
+    echo "============="
+    echo "    CPU"
+    echo "============="
+    lscpu
+    echo ""
+    echo ""
 
+    echo "============="
+    echo "    RAM"
+    echo "============="
+    free -h
+    echo ""
+    echo ""
+
+    echo "============="
+    echo "    GPU"
+    echo "============="
+    nvidia-smi
+}
 
 
 
@@ -81,6 +100,46 @@ alias stop_service='sudo systemctl stop' # followed by your service name
 # git
 alias undo-commit='git reset --soft HEAD^' # origin/main or something
 alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
+git_fix() { # good for fixing a broken repo reseting to the origin branch
+    set -e
+
+    BRANCH="$1"
+
+    if [ -z "$BRANCH" ]; then
+        echo "Usage: $0 <branch-name>"
+        exit 1
+    fi
+
+    # Get remote URL
+    REMOTE_URL=$(git config --get remote.origin.url)
+
+    if [ -z "$REMOTE_URL" ]; then
+        echo "Error: Could not find remote origin URL."
+        exit 1
+    fi
+
+    echo "Remote URL: $REMOTE_URL"
+
+    # Remove existing git repo
+    rm -rf .git
+
+    # Reinitialize repo
+    git init
+
+    # Add original remote
+    git remote add origin "$REMOTE_URL"
+
+    # Fetch branch
+    git fetch origin "$BRANCH"
+
+    # Checkout branch
+    git checkout -b "$BRANCH" "origin/$BRANCH"
+
+    # Pull latest changes
+    git pull origin "$BRANCH"
+
+    echo "Repository reset complete. Checked out branch '$BRANCH'."
+}
 delete_branch() {
     if [ -z "$1" ]; then
         echo "Please provide the branch name"
