@@ -101,8 +101,7 @@ alias stop_service='sudo systemctl stop' # followed by your service name
 alias undo-commit='git reset --soft HEAD^' # origin/main or something
 alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
 git_fix() { # good for fixing a broken repo reseting to the origin branch
-    set -e
-
+    
     BRANCH="$1"
 
     if [ -z "$BRANCH" ]; then
