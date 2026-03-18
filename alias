@@ -145,7 +145,7 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
     echo ""
     echo "** Reset to remote branch and set upstream **"
     echo ""
-    git reset --hard "origin/$BRANCH"
+    git reset --soft "origin/$BRANCH"
     git branch "--set-upstream-to=origin/$BRANCH" "$BRANCH"
     echo ""
 
