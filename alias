@@ -79,7 +79,7 @@ create_systemd() {
 }
 
 alias create_service='create_systemd'
-alias service_files='cd /etc/systemd/system'
+alias view_services='cd /etc/systemd/system'
 register_systemd() {
     if [ -z "$1" ]; then
         echo "Please provide a service name. (my_service.service)"
@@ -208,6 +208,7 @@ repo() {
     fi
 }
 # curl -u "wbf22" https://api.github.com/user/repos -d '{"name":"terminal_images"}'
+alias git_forget='git update-index --assume-unchanged'
 
 
 # shortcuts
