@@ -37,6 +37,8 @@ alias public_ip='curl ifconfig.me'
 alias ip='ifconfig'
 alias size='du -sh'
 alias size_down='du -h --max-depth=1'
+alias music_score='~/Documents/MuseScore-Studio-4.5.2.251141401-x86_64.AppImage'
+alias minecraft='tmux attach-session -t minecraft_server'
 # 'sensors' is for checking temperatures on my linux pc
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
@@ -60,10 +62,6 @@ about() {
     echo "============="
     nvidia-smi
 }
-
-
-
-
 
 # making systemctl scripts
 create_systemd() {
