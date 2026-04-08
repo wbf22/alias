@@ -1,20 +1,13 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+g",
-        "command": "workbench.action.terminal.sendSequence",
-        "args": {
-            "text": "chat -f\u000D"
-        }
-    },
-    {
         "key": "shift+space",
         "command": "type",
         "args": { "text": "_" },
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+=",
+        "key": "alt+-",
         "command": "workbench.action.zoomOut"
     },
     {
@@ -22,7 +15,7 @@
         "command": "-workbench.action.zoomOut"
     },
     {
-        "key": "alt+-",
+        "key": "alt+=",
         "command": "workbench.action.zoomIn"
     },
     {
@@ -169,11 +162,6 @@
     {
         "key": "f6",
         "command": "-workbench.action.focusNextPart"
-    },
-    {
-        "key": "f8",
-        "command": "editor.debug.action.toggleBreakpoint",
-        "when": "debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus"
     },
     {
         "key": "f7",
@@ -778,5 +766,19 @@
         "key": "ctrl+alt+c",
         "command": "-copyFilePath",
         "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.terminal.goToRecentDirectory",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "github.copilot.chat.completions.toggle",
+        "when": "github.copilot.activated && github.copilot.extensionUnification.activated"
+    },
+    {
+        "key": "f8",
+        "command": "editor.debug.action.runToCursor"
     }
 ]
