@@ -1,0 +1,11 @@
+
+delete_branch() {
+    if [ -z "$1" ]; then
+        echo "Please provide the branch name"
+        return 1
+    fi
+
+    git branch -D "$1"
+    git push origin --delete "$1"
+
+}

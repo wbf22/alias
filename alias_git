@@ -1,0 +1,14 @@
+
+
+# git
+alias undo-commit='git reset --soft HEAD^' # origin/main or something
+alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
+
+. "$HOME/Documents/alias/git_scripts/repo" # repo
+. "$HOME/Documents/alias/git_scripts/delete_branch" # delete_branch
+. "$HOME/Documents/alias/git_scripts/git_fix" # git_fix
+. "$HOME/Documents/alias/git_scripts/save" # save
+
+
+# curl -u "wbf22" https://api.github.com/user/repos -d '{"name":"terminal_images"}'
+alias git_forget='git update-index --assume-unchanged'

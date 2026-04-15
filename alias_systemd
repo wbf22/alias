@@ -1,0 +1,32 @@
+
+# making systemctl scripts
+create_systemd() {
+    if [ -z "$1" ]; then
+        echo "Please provide a service name. (my_service.service)"
+        return 1
+    fi
+    
+    FILE_PATH="/etc/systemd/system/$1"
+    TEMPLATE="$HOME/Documents/alias/basic_systemctl_script.md"
+    
+    sudo cp "$TEMPLATE" "$FILE_PATH"
+}
+
+alias create_service='create_systemd'
+alias list_services='cd /etc/systemd/system'
+register_systemd() {
+    if [ -z "$1" ]; then
+        echo "Please provide a service name. (my_service.service)"
+        return 1
+    fi
+
+    sudo systemctl daemon-reload
+
+    sudo systemctl enable "$1"
+}
+alias register_service='register_systemd' # followed by your service name
+alias start_service='sudo systemctl start' # followed by your service name
+alias status_serivce='sudo systemctl status' # followed by your service name
+alias logs_service='sudo journalctl -u "$1" -f' # followed by your service name
+alias stop_service='sudo systemctl stop' # followed by your service name
+

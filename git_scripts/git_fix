@@ -1,0 +1,52 @@
+git_fix() { # good for fixing a broken repo reseting to the origin branch
+    
+    BRANCH="$1"
+
+    if [ -z "$BRANCH" ]; then
+        echo "Usage: $0 <branch-name>"
+        exit 1
+    fi
+
+    # Get remote URL
+    REMOTE_URL=$(git config --get remote.origin.url)
+
+    if [ -z "$REMOTE_URL" ]; then
+        echo "Error: Could not find remote origin URL."
+        exit 1
+    fi
+
+    echo ""
+    echo "** Remote URL: $REMOTE_URL **"
+    echo ""
+
+    echo "** Remove existing git repo **"
+    echo ""
+    rm -rf .git
+
+    echo "** Reinitialize repo **"
+    echo ""
+    git init -b "$BRANCH"
+    echo ""
+
+    echo ""
+    echo "** Add original remote **"
+    echo ""
+    git remote add origin "$REMOTE_URL"
+
+    echo ""
+    echo "** Fetch branch **"
+    echo ""
+    git fetch origin "$BRANCH"
+    echo ""
+
+    echo ""
+    echo "** Reset to remote branch and set upstream **"
+    echo ""
+    git reset --hard "origin/$BRANCH"
+    git branch "--set-upstream-to=origin/$BRANCH" "$BRANCH"
+    echo ""
+
+
+    echo ""
+    echo "** Repository reset complete. Checked out branch '$BRANCH'. **"
+}

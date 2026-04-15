@@ -1,0 +1,41 @@
+
+# shortcuts
+alias todo='csv ~/Documents/SYNC/todo.csv'
+
+
+# convenience
+alias ld='ls -larth'
+alias count='ls -l | wc -l' # counts files in a directory
+alias l='clear'
+alias ports='netstat -tuln'
+alias nowrap='tput rmam'
+alias wrap='tput smam'
+alias public_ip='curl ifconfig.me'
+alias ip='ifconfig'
+alias size='du -sh'
+alias size_down='du -h --max-depth=1'
+alias music_score='~/Documents/MuseScore-Studio-4.5.2.251141401-x86_64.AppImage'
+alias minecraft='tmux attach-session -t minecraft_server'
+# 'sensors' is for checking temperatures on my linux pc
+# Other Commands that don't need an alias
+# top=(show processes like activity monitor)
+about() {
+    echo "============="
+    echo "    CPU"
+    echo "============="
+    lscpu
+    echo ""
+    echo ""
+
+    echo "============="
+    echo "    RAM"
+    echo "============="
+    free -h
+    echo ""
+    echo ""
+
+    echo "============="
+    echo "    GPU"
+    echo "============="
+    nvidia-smi
+}
