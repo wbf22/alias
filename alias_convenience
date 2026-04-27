@@ -6,6 +6,7 @@ alias todo='csv ~/Documents/SYNC/todo.csv'
 # convenience
 alias ld='ls -larth'
 alias count='ls -l | wc -l' # counts files in a directory
+alias countr='find . -type f | wc -l' # counts files in a directory recursivly
 alias l='clear'
 alias ports='netstat -tuln'
 alias nowrap='tput rmam'
