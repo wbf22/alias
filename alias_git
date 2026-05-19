@@ -12,3 +12,10 @@ alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#
 
 # curl -u "wbf22" https://api.github.com/user/repos -d '{"name":"terminal_images"}'
 alias git_forget='git update-index --assume-unchanged'
+
+
+squash() {
+    local n=${1:-2}
+    local msg=$(git log --format=%B --reverse HEAD~$n..HEAD)
+    git reset --soft HEAD~$n && git commit --edit -m "$msg"
+}
