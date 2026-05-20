@@ -17,5 +17,5 @@ alias git_forget='git update-index --assume-unchanged'
 squash() {
     local n=${1:-2}
     local msg=$(git log --format=%B --reverse HEAD~$n..HEAD)
-    git reset --soft HEAD~$n && git commit --edit -m "$msg"
+    git reset --soft HEAD~$n && git commit --edit -m "$msg" && git push --force
 }

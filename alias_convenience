@@ -18,6 +18,7 @@ alias size_down='du -h --max-depth=1'
 alias music_score='~/Documents/MuseScore-Studio-4.5.2.251141401-x86_64.AppImage'
 alias minecraft='tmux attach-session -t minecraft_server'
 alias data_drive='cd /mnt/245669b7-fd6a-495c-b878-596b20181109'
+alias docs='cd ~Documents'
 # 'sensors' is for checking temperatures on my linux pc
 # Other Commands that don't need an alias
 # top=(show processes like activity monitor)
