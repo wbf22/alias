@@ -2,7 +2,7 @@
 
 # git
 alias undo-commit='git reset --soft HEAD^' # origin/main or something
-alias graph="git log --graph --decorate --all --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ar)%Creset %s'"
+alias graph="git log --graph --decorate --all --date=human --pretty=format:'%C(auto)%h%d %C(#888888)(%an; %ad)%Creset %s'"
 
 . "$HOME/Documents/alias/git_scripts/repo" # repo
 . "$HOME/Documents/alias/git_scripts/delete_branch" # delete_branch
