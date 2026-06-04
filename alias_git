@@ -14,8 +14,13 @@ alias graph="git log --graph --decorate --all --date=human --pretty=format:'%C(a
 alias git_forget='git update-index --assume-unchanged'
 
 
+# use like 'squash 3' to squash the last 3 commits
 squash() {
     local n=${1:-2}
     local msg=$(git log --format=%B --reverse HEAD~$n..HEAD)
     git reset --soft HEAD~$n && git commit --edit -m "$msg" && git push --force
 }
+
+
+alias checkpoint='git commit -a' 
+
