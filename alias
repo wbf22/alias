@@ -1,3 +1,4 @@
+
 # for alias making
 alias palias='cat ~/Documents/alias/alias'
 alias s='source ~/Documents/alias/alias && source ~/Documents/alias/alias_convenience && source ~/Documents/alias/alias_git && source ~/Documents/alias/alias_programs && source ~/Documents/alias/alias_systemd && source ~/Documents/alias/alias_work'
@@ -15,3 +16,7 @@ alias pwork='cat ~/Documents/alias/alias_work'
 . "$HOME/Documents/alias/alias_git" # delete_branch
 . "$HOME/Documents/alias/alias_programs" # git_fix
 . "$HOME/Documents/alias/alias_work" # save
+
+
+# make kill code ctrl+k instead of ctrl+c
+stty intr ^K
