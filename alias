@@ -16,6 +16,7 @@ alias pwork='cat ~/Documents/alias/alias_work'
 . "$HOME/Documents/alias/alias_git" # delete_branch
 . "$HOME/Documents/alias/alias_programs" # git_fix
 . "$HOME/Documents/alias/alias_work" # save
+. "$HOME/Documents/alias/alias_systemd" # services
 
 
 # make kill code ctrl+k instead of ctrl+c
