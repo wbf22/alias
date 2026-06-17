@@ -5,9 +5,9 @@ alias s='source ~/Documents/alias/alias && source ~/Documents/alias/alias_conven
 alias e='vim ~/Documents/alias/alias'
 
 # alias files
-alias pconvenience='cat ~/Documents/alias/alias_convenience'
 alias pgit='cat ~/Documents/alias/alias_git'
 alias pprograms='cat ~/Documents/alias/alias_programs'
+alias pconvenience='cat ~/Documents/alias/alias_convenience'
 alias psystemd='cat ~/Documents/alias/alias_systemd'
 alias pwork='cat ~/Documents/alias/alias_work'
 
