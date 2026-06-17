@@ -21,3 +21,8 @@ alias pwork='cat ~/Documents/alias/alias_work'
 
 # make kill code ctrl+k instead of ctrl+c
 stty intr ^K
+
+
+
+# commands that run on terminal startup
+public_ip

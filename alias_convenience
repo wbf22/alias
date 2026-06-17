@@ -4,14 +4,15 @@ alias todo='csv ~/Documents/SYNC/todo.csv'
 
 
 # convenience
-alias ld='ls -larth'
+ld() { cd "$1" && pwd && la; } # move to a directory and display contents
+alias lss='ls -larth'
 alias count='ls -l | wc -l' # counts files in a directory
 alias countr='find . -type f | wc -l' # counts files in a directory recursivly
 alias l='clear'
 alias ports='netstat -tuln'
 alias nowrap='tput rmam'
 alias wrap='tput smam'
-alias public_ip='curl ifconfig.me'
+alias public_ip='curl ifconfig.me && echo ""'
 alias ip='ifconfig'
 alias size='du -sh'
 alias size_down='du -h --max-depth=1'
