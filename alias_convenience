@@ -4,7 +4,7 @@ alias todo='csv ~/Documents/SYNC/todo.csv'
 
 
 # convenience
-ld() { cd "$1" && pwd && ~/Documents/la/la; } # move to a directory and display contents
+ld() { cd "$1" && echo -e "\033[1;32m$(command pwd)\033[0m" && ~/Documents/la/la; } # move to a directory and display contents
 alias lss='ls -larth'
 alias count='ls -l | wc -l' # counts files in a directory
 alias countr='find . -type f | wc -l' # counts files in a directory recursivly
