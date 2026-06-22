@@ -12,11 +12,11 @@ alias psystemd='cat ~/Documents/alias/alias_systemd'
 alias pwork='cat ~/Documents/alias/alias_work'
 
 
-. "$HOME/Documents/alias/alias_programs" # git_fix
-. "$HOME/Documents/alias/alias_convenience" # repo
-. "$HOME/Documents/alias/alias_git" # delete_branch
-. "$HOME/Documents/alias/alias_work" # save
-. "$HOME/Documents/alias/alias_systemd" # services
+. "$HOME/Documents/alias/alias_programs" 
+. "$HOME/Documents/alias/alias_convenience"
+. "$HOME/Documents/alias/alias_git" 
+. "$HOME/Documents/alias/alias_work"
+. "$HOME/Documents/alias/alias_systemd"
 
 
 # make kill code ctrl+k instead of ctrl+c
