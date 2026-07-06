@@ -10,6 +10,8 @@ alias count='ls -l | wc -l' # counts files in a directory
 alias countr='find . -type f | wc -l' # counts files in a directory recursivly
 alias l='clear'
 alias ports='netstat -tuln'
+port() { lsof -i :"$1"}
+clear_port() {kill -9 $(lsof -ti :"$1")}
 alias nowrap='tput rmam'
 alias wrap='tput smam'
 alias public_ip='curl ifconfig.me && echo ""'
