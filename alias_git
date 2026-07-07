@@ -24,3 +24,8 @@ squash() {
 
 alias checkpoint='git commit -a' 
 
+wbf22() {
+    git config user.name "wbf22"
+    git config user.email "thebear34135@gmail.com"
+}
+
