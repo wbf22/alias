@@ -1,3 +1,3 @@
 # stop default keyring thing on ubuntu
 
-Add password optional pam_gnome_keyring.so to /etc/pam.d/login (or gdm password), then on auto-login it won't prompt.
+open 'Passwords and Keys' and click on login and change password. Then enter the current password and then set the new one to an empty string

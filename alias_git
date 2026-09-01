@@ -29,3 +29,5 @@ wbf22() {
     git config user.email "thebear34135@gmail.com"
 }
 
+alias diff="git diff --color-words"
+
