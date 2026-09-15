@@ -1,0 +1,2 @@
+mvn clean install -U # tell maven to bypass caches
+git show <hash>:<file_path>

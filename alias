@@ -11,6 +11,9 @@ alias pconvenience='cat ~/Documents/alias/alias_convenience'
 alias psystemd='cat ~/Documents/alias/alias_systemd'
 alias pwork='cat ~/Documents/alias/alias_work'
 
+# reference
+alias preference='cat  ~/Documents/alias/reference'
+
 
 . "$HOME/Documents/alias/alias_programs" 
 . "$HOME/Documents/alias/alias_convenience"
