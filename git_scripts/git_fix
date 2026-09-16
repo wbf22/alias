@@ -4,7 +4,7 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
 
     if [ -z "$BRANCH" ]; then
         echo "Usage: $0 <branch-name>"
-        exit 1
+        return 1
     fi
 
     # Get remote URL
@@ -12,7 +12,7 @@ git_fix() { # good for fixing a broken repo reseting to the origin branch
 
     if [ -z "$REMOTE_URL" ]; then
         echo "Error: Could not find remote origin URL."
-        exit 1
+        return 1
     fi
 
     echo ""
