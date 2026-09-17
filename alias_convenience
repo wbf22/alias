@@ -46,3 +46,10 @@ about() {
     echo "============="
     nvidia-smi
 }
+
+pc_specs() {
+    . /etc/os-release
+    c=$(awk -F': +' '/^model name/{print $2;exit}' /proc/cpuinfo)
+    n=$(nproc 2>/dev/null)
+    echo "platform=Linux; os=$PRETTY_NAME; cpu=${c:-$(uname -m)}; cores=${n:-unknown}; ram=$(awk '/MemTotal/{printf "%.0f",$2/1048576}' /proc/meminfo) GB; kernel=$(uname -r)"
+}
