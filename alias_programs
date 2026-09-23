@@ -15,3 +15,4 @@ alias color='~/Documents/terminal_color_picker/color_picker'
 alias alarm='python3 ~/Documents/terminal_alarm/alarm_cli.py'
 unalias la
 alias la='~/Documents/la/la'
+alias activity='python3 ~/Documents/alias/git_activity.py'

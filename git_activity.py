@@ -59,13 +59,13 @@ def activity_level(value, maximum):
 
 RESET = "\033[0m"
 
-# Distinct hues (truecolor) so each activity level is easy to pick out.
+# Tan-to-brown gradient (truecolor), light for low activity, rich brown for high.
 SHADE_COLORS = (
     "",
-    "\033[38;2;88;166;255m",   # blue
-    "\033[38;2;63;185;80m",    # green
-    "\033[38;2;227;179;65m",   # yellow
-    "\033[38;2;248;81;73m",    # red
+    "\033[38;2;234;217;190m",  # light tan
+    "\033[38;2;200;161;101m",  # tan
+    "\033[38;2;156;106;59m",   # medium brown
+    "\033[38;2;107;68;35m",    # dark brown
 )
 
 
@@ -77,7 +77,7 @@ def shade(level):
 
 
 def print_legend():
-    blocks = " ".join(shade(level) * 2 for level in range(1, 5))
+    blocks = " ".join(shade(level) * 3 for level in range(1, 5))
     print()
     print(f"low {blocks} high")
 
@@ -128,7 +128,7 @@ def render_daily(commits, first, last):
 
 
 def render_monthly(commits, first, last):
-    # Monthly analogue: 12 rows (Jan-Dec), one column per year.
+    # Monthly analogue with months as columns and one row per year.
     years = list(range(first.year, last.year + 1))
     counts = Counter((d.year, d.month) for d in commits)
     values = [counts[(y, m)] for y in years for m in range(1, 13)]
@@ -138,17 +138,19 @@ def render_monthly(commits, first, last):
     print(f"Commits — monthly view ({first} → {last})")
     print()
 
-    print("     ", end="")
-    for y in years:
-        print(f"{str(y)[-2:]:^3}", end="")
+    names = [date(2000, month, 1).strftime("%b") for month in range(1, 13)]
+    cell = max(len(name) for name in names) + 1
+
+    print(" " * 6, end="")
+    for name in names:
+        print(f"{name:<{cell}}", end="")
     print()
 
-    for month in range(1, 13):
-        name = date(2000, month, 1).strftime("%b")
-        print(f"{name:>3} |", end="")
-        for year in years:
+    for year in years:
+        print(f"{year:>4} |", end="")
+        for month in range(1, 13):
             level = activity_level(counts.get((year, month), 0), maximum)
-            print(f"{shade(level) * 2} ", end="")
+            print(f"{shade(level) * (cell - 1)} ", end="")
         print()
 
     print()
