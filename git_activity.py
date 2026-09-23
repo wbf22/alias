@@ -70,7 +70,8 @@ SHADE_COLORS = (
 
 
 def shade(level):
-    char = " ░▒▓█"[level]
+    # char = " ░▒▓█"[level]
+    char = " ████"[level]
     if level == 0:
         return char
     return f"{SHADE_COLORS[level]}{char}{RESET}"
