@@ -125,6 +125,7 @@ def render_daily(commits, first, last):
     print()
     print(f"Total commits: {sum(counts.values()):,}")
     print_legend()
+    print()
 
 
 def render_monthly(commits, first, last):
@@ -156,6 +157,7 @@ def render_monthly(commits, first, last):
     print()
     print(f"Total commits: {sum(counts.values()):,}")
     print_legend()
+    print()
 
 
 def render_yearly(commits, first, last):
@@ -182,6 +184,7 @@ def render_yearly(commits, first, last):
     print()
     print(f"Total commits: {sum(counts.values()):,}")
     print_legend()
+    print()
 
 
 def main():
