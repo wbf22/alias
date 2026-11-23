@@ -14,3 +14,4 @@ unalias la
 alias la='~/Documents/la/la'
 alias activity='python3 ~/Documents/alias/git_activity.py'
 alias mark_table_fix='python3 ~/Documents/alias/markdown_table_fixer.py'
+alias ai_data='python3 ~/Documents/ai_data/aidata.py'
