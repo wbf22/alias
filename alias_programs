@@ -3,15 +3,14 @@
 # my programs
 alias chat='python3 ~/Documents/chat_terminal/chat.py -g -ok $(cat ~/Documents/alias/chat.api.key) -ak $(cat ~/Documents/alias/claude.api.key)'
 alias csv='python3 ~/Documents/micro_spreadsheet/micro_spreadsheet.py'
-alias draw='python3 ~/Documents/alias/whitespace_file.py'
 alias pdrive='python3 ~/Documents/pdrive/pdrive-backup.py --server https://192.168.0.36:8080 --password the_bear_is_bash_fb2754a0_73b4_44eb_9a99_df36e4aeb95b --backup-dir ~/Documents/SYNC --ca-cert ~/Documents/pdrive/certs/pdrive-ca.crt'
 alias ti='~/Documents/terminal_images/ti -i'
 alias emoji='~/Documents/c_calculators/emojis/emojis'
-alias color_p='python3 ~/Documents/alias/palette.py'
+alias color_p='python3 ~/Documents/alias/programs/palette.py'
 alias color='~/Documents/terminal_color_picker/color_picker'
 alias alarm='python3 ~/Documents/terminal_alarm/alarm_cli.py'
 unalias la
 alias la='~/Documents/la/la'
-alias activity='python3 ~/Documents/alias/git_activity.py'
-alias mark_table_fix='python3 ~/Documents/alias/markdown_table_fixer.py'
+alias activity='python3 ~/Documents/alias/git_scripts/git_activity.py'
+alias mark_table_fix='python3 ~/Documents/alias/programs/markdown_table_fixer.py'
 alias ai_data='python3 ~/Documents/ai_data/aidata.py'

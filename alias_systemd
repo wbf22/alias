@@ -7,7 +7,7 @@ create_systemd() {
     fi
     
     FILE_PATH="/etc/systemd/system/$1"
-    TEMPLATE="$HOME/Documents/alias/basic_systemctl_script.md"
+    TEMPLATE="$HOME/Documents/alias/programs/basic_systemctl_script.md"
     
     sudo cp "$TEMPLATE" "$FILE_PATH"
 }
